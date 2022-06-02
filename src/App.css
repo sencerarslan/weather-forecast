@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 760px;
+  width: 100%;
+  margin:100px auto; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.select-box{
+  background-color: #f6fafd;
+  padding: 10px;
+  border-radius: 4px;
+}
+.select-box select{
+  padding:7.5px;
+  border-radius: 4px;
+  border-color:#d2dbe5;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.days{ 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 15px;
 }
-
-.App-link {
-  color: #61dafb;
+.days .day {
+  padding: 5px 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  color:#b6b6b6;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.days .day:hover {
+  color:#797979;
+}
+.days .day:hover .day-img{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.days .day:first-child{ 
+  border:solid 1px #ececec;
+  background-color: #fbfcff;
+}
+.days .day-img{
+  width: 100%;
+  max-width: 80px;
+  transition: transform 0.5s;
+}
+.days .day-deg span:first-child{ 
+  color:#797979;
+  margin-right: 5px;
 }
